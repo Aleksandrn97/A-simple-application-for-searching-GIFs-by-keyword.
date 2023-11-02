@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+/*Кнопки и инпут*/
+.btn-panel {
+    padding: .625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Стили для отображения полученныз изображений*/
+
+/*Сгруппированные картинки*/
+.image-group img {
+    width: 9.375rem;
+    height: 9.375rem;
+    object-fit: cover;
+    padding: 1.563rem;
+    border: .0631rem solid darkgray;
+    margin: .313rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-group {
+    display: grid;
+    grid-template-rows: 25px;
+    gap: .625rem;
+    border: .0631rem solid darkgray;
+    margin: 1.563rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.image-group span {
+    margin: .313rem 0 .313rem 1.563rem;
 }
 
-.App-link {
-  color: #61dafb;
+/*Разгруппированные картинки*/
+
+.images-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .625rem;
+    margin: 3.125rem .313rem 3.125rem .313rem;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.images-no-group-item {
+    text-align: center;
+    border: .0631rem solid #ccc;
 }
+
+/*Модальное окно с ошибкой*/
+.error-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, .76);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.error-modal-content {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*------------------------------------*/
